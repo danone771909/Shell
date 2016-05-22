@@ -1,17 +1,18 @@
 package shellApplication.main;
 
 import java.io.IOException;
-import shellApplication.prompt.Prompt;
+
+import shellApplication.CommandManager.CommandManager;
 
 public class ShellApplicationLauncher {
 
     public static void main(String[] args) throws IOException { 
     	
-        Prompt prompt = new Prompt();
-        
+        CommandManager commandManager = new CommandManager();
+
         while(true)
         {
-        	if(!prompt.run())
+        	if(!commandManager.run())
         		break;
         }
     } 
